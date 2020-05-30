@@ -1,3 +1,10 @@
+body {
+  background-image: url('smurfVillage.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 100vw;
+}
+
 .App {
   text-align: center;
 }
