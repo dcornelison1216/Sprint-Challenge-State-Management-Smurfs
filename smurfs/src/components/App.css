@@ -53,3 +53,12 @@ body {
   border-radius: 10px;
   margin: 2rem 5rem 2rem 5rem;
 }
+
+.input {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  background-color: #65BDEB;
+  color: #EB1C24;
+  font-family: 'Chicle', cursive;
+  font-size: 2.3rem;
+}
