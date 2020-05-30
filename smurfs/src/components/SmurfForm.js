@@ -53,7 +53,7 @@ class SmurfForm extends React.Component {
           <input name='name' type='text' placeholder="Smurf's Name" value={this.state.name} onChange={this.handleChanges} className="input" />
           <input name='age' type='text' placeholder="Smurf's Age" value={this.state.age} onChange={this.handleChanges} className="input" />
           <input name='height' type='text' placeholder="Smurf's Height" value={this.state.height} onChange={this.handleChanges} className="input" />
-          <button onClick={this.fetchSmurfs} type='submit'>Add Smurf</button>
+          <button onClick={this.fetchSmurfs} type='submit' className='button'>Add Smurf</button>
         </form>
         {this.state.error ? <p className='error'>{this.state.error}</p> : null}
       </>
