@@ -9,6 +9,17 @@ body {
   text-align: center;
 }
 
+.header {
+  background: #65BDEB;
+  border-radius: 5%;
+  font-family: 'Chicle', cursive;
+  font-size: 2.3rem;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 50rem;
+}
+
 .smurf {
   background: #65BDEB;
   width: 200px;
