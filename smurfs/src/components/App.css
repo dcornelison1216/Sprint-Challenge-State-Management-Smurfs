@@ -51,7 +51,10 @@ body {
   font-size: 2rem;
   background: #65BDEB;
   border-radius: 10px;
-  margin: 2rem 5rem 2rem 5rem;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  width: 50rem;
 }
 
 .input {
