@@ -20,7 +20,8 @@ export const smurfsReducer = (state = initialState, action) => {
     case DELETE_SMURF:
       return {
         ...state,
-        smurfs: action.payload
+        smurfs: action.payload,
+        deleteError: ''
       }
     case DELETE_SMURF_FAIL:
       return {

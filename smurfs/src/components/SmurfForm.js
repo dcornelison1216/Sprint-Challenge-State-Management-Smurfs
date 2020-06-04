@@ -8,7 +8,8 @@ class SmurfForm extends React.Component {
     age: '',
     height: '',
     id: '',
-    error: ''
+    error: '',
+    deleteError: ''
   }
 
 
@@ -17,7 +18,8 @@ class SmurfForm extends React.Component {
     this.setState({
       ...this.state,
       [e.target.name]: e.target.value,
-      error: ''
+      error: '',
+      deleteError: ''
     })
   }
 
@@ -43,7 +45,8 @@ class SmurfForm extends React.Component {
     if(this.state.id) {
       this.props.deleteSmurf(this.state.id)
       this.setState({
-        id: ''
+        id: '',
+        deleteError: ''
       })
     }
   }
@@ -63,10 +66,12 @@ class SmurfForm extends React.Component {
         </form>
         {this.state.error ? <p className='error'>{this.state.error}</p> : null}
         {this.props.error ? <p className='error'>{this.props.error}</p> : null}
-        <form>
+        
+        <form className='deleteForm'>
           <input name='id' type='text' placeholder="Smurf's id" value={this.state.id} onChange={this.handleChanges} className="input" />
           <button onClick={this.removeSmurf} type='submit' className='button'>Delete Smurf</button>
         </form>
+        {this.props.deleteError ? <p className='error'>That smurf doesn't live here! Smurf again.</p> : null}
       </>
     )
   }
@@ -77,7 +82,8 @@ const mapStateToProps = state => {
     name: state.name,
     age: state.age,
     height: state.height,
-    error: state.error
+    error: state.error,
+    deleteError: state.deleteError
   }
 }
 

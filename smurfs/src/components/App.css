@@ -9,6 +9,10 @@ body {
   text-align: center;
 }
 
+.deleteForm {
+  margin-top: 1rem;
+}
+
 .header {
   background: #65BDEB;
   border-radius: 10px;
