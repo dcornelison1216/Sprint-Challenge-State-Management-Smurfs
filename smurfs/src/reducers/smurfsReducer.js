@@ -26,12 +26,16 @@ export const smurfsReducer = (state = initialState, action) => {
         height: state.height
       }
       axios.post('http://localhost:3333/smurfs', newSmurf)
-      return {
-        ...state,
-        name: '',
-        age: '',
-        height: ''
-      }
+        .then(res => {
+          return {
+            ...state,
+            name: '',
+            age: '',
+            height: '',
+            smurfs: res.data
+          }
+        })
+      return state
     case FETCH_SMURFS_FAIL:
       return {
         ...state,
