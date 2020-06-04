@@ -1,3 +1,93 @@
+body {
+  background-image: url('smurfVillage.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 100vw;
+}
+
 .App {
   text-align: center;
+}
+
+.deleteForm {
+  margin-top: 1rem;
+}
+
+.header {
+  background: #65BDEB;
+  border-radius: 10px;
+  font-family: 'Chicle', cursive;
+  font-size: 2.3rem;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 50rem;
+}
+
+.smurf {
+  background: #65BDEB;
+  width: 200px;
+  border-radius: 10px;
+  font-family: 'Chicle', cursive;
+  font-size: 2.3rem;
+  margin: 1rem;
+}
+
+.details {
+  color: #EB1C24;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+}
+
+.smurfsListDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+::placeholder {
+  color: #EB1C24;
+  opacity: .5;
+}
+
+:-ms-input-placeholder {
+  color: red;
+}
+
+::-ms-input-placeholder {
+  color: red;
+}
+
+.error {
+  color: black;
+  font-family: 'Chicle', cursive;
+  font-size: 2rem;
+  background: #65BDEB;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  width: 50rem;
+}
+
+.input {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  background-color: #65BDEB;
+  color: #EB1C24;
+  font-family: 'Chicle', cursive;
+  font-size: 2.3rem;
+  border-radius: 10px
+}
+
+.button {
+  background-color: #EB1C24;
+  color: #65BDEB;
+  font-family: 'Chicle', cursive;
+  font-size: 2.3rem;
+  border-radius: 10px;
 }
