@@ -59,7 +59,7 @@ class SmurfForm extends React.Component {
           <button onClick={this.addSmurf} type='submit' className='button'>Add Smurf</button>
         </form>
         {this.state.error ? <p className='error'>{this.state.error}</p> : null}
-        {this.props.error ? <p className='error'>Stop smurfing! That smurf already lives here.</p> : null}
+        {this.props.error ? <p className='error'>{this.props.error}</p> : null}
         <form>
           <input name='id' type='text' placeholder="Smurf's id" value={this.state.id} onChange={this.handleChanges} className="input" />
           <button onClick={this.removeSmurf} type='submit' className='button'>Delete Smurf</button>

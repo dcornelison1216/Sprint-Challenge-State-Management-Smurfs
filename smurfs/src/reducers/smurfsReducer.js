@@ -1,4 +1,4 @@
-import { ADD_NEW_SMURF, FETCH_SMURFS_FAIL, FETCH_SMURFS_SUCCESS, UPDATE_NAME, UPDATE_AGE, UPDATE_HEIGHT } from '../actions';
+import { ADD_NEW_SMURF, FETCH_SMURFS_FAIL, FETCH_SMURFS_SUCCESS, UPDATE_NAME, UPDATE_AGE, UPDATE_HEIGHT, DELETE_SMURF } from '../actions';
 
 export const initialState = {
   name: '',
@@ -14,6 +14,11 @@ export const smurfsReducer = (state = initialState, action) => {
       return {
         ...state,
         error: '',
+        smurfs: action.payload
+      }
+    case DELETE_SMURF:
+      return {
+        ...state,
         smurfs: action.payload
       }
     case FETCH_SMURFS_FAIL:

@@ -6,6 +6,7 @@ export const FETCH_SMURFS_FAIL = 'FETCH_SMURFS_FAIL';
 export const UPDATE_NAME = 'UPDATE_NAME';
 export const UPDATE_AGE = 'UPDATE_AGE';
 export const UPDATE_HEIGHT = 'UPDATE_HEIGHT';
+export const DELETE_SMURF = 'DELETE_SMURF';
 
 export const getSmurfs = () => dispatch => {
   axios
@@ -19,7 +20,15 @@ export const getSmurfs = () => dispatch => {
 }
 
 export const deleteSmurf = id => dispatch => {
-  console.log(id)
+  axios
+    .delete(`http://localhost:3333/smurfs/${id}`)
+    .then(res => {
+      console.log('deleteSmurf res', res)
+      dispatch({ type: DELETE_SMURF, payload: res.data });
+    })
+    .catch(err => {
+      dispatch({ type: FETCH_SMURFS_FAIL, payload: err })
+    })
 }
 
 export const addNewSmurf = smurf => dispatch => {
