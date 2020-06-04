@@ -45,8 +45,21 @@ body {
   justify-content: center;
 }
 
-.error {
+::placeholder {
   color: #EB1C24;
+  opacity: .5;
+}
+
+:-ms-input-placeholder {
+  color: red;
+}
+
+::-ms-input-placeholder {
+  color: red;
+}
+
+.error {
+  color: black;
   font-family: 'Chicle', cursive;
   font-size: 2rem;
   background: #65BDEB;
