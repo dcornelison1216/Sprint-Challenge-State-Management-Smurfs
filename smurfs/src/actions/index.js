@@ -18,6 +18,10 @@ export const getSmurfs = () => dispatch => {
     })
 }
 
+export const deleteSmurf = id => dispatch => {
+  console.log(id)
+}
+
 export const addNewSmurf = smurf => dispatch => {
   const newSmurf = {
     name: smurf.name,

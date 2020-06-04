@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addNewSmurf, getSmurfs } from '../actions';
+import { addNewSmurf, getSmurfs, deleteSmurf } from '../actions';
 
 class SmurfForm extends React.Component {
   state = {
     name: '',
     age: '',
     height: '',
+    id: '',
     error: ''
   }
 
@@ -35,8 +36,14 @@ class SmurfForm extends React.Component {
         error: 'Smurf it! We wanna know more about this new smurf!!'
       })
     }
-
   };
+
+  removeSmurf = e => {
+    e.preventDefault();
+    if(this.state.id) {
+      this.props.deleteSmurf(this.state.id)
+    }
+  }
 
   componentDidMount() {
     this.props.getSmurfs();
@@ -53,6 +60,10 @@ class SmurfForm extends React.Component {
         </form>
         {this.state.error ? <p className='error'>{this.state.error}</p> : null}
         {this.props.error ? <p className='error'>Stop smurfing! That smurf already lives here.</p> : null}
+        <form>
+          <input name='id' type='text' placeholder="Smurf's id" value={this.state.id} onChange={this.handleChanges} className="input" />
+          <button onClick={this.removeSmurf} type='submit' className='button'>Delete Smurf</button>
+        </form>
       </>
     )
   }
@@ -69,5 +80,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { addNewSmurf, getSmurfs }
+  { addNewSmurf, getSmurfs, deleteSmurf }
 )(SmurfForm);
