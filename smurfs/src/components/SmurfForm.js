@@ -42,6 +42,9 @@ class SmurfForm extends React.Component {
     e.preventDefault();
     if(this.state.id) {
       this.props.deleteSmurf(this.state.id)
+      this.setState({
+        id: ''
+      })
     }
   }
 

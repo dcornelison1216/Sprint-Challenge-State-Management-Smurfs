@@ -14,6 +14,7 @@ class SmurfsList extends React.Component {
             <p className='details'>{smurf.name}</p>
             <p className='details'>{smurf.age}</p>
             <p className='details'>{smurf.height}</p>
+            <p className='details'>id: {smurf.id}</p>
           </div>
         ))}
       </div>
